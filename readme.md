@@ -9,7 +9,7 @@
 
 # How to use
 - After installing the requirements and preparing some files (scroll down), run the `create_grades.py` program inside it's containing folder.
-- In case you can not copy-paste the grades, I also made the `insert_grades.py` script. To use it, run it inside it's containing folder, head over to `labmat > course > Ayudante > Ingreso de Notas` and click the pencil icon of the test you want to grade. There, select the first box on where to enter the grades and press the `b` key on your keyboard. It should automatically fill in all the grades one by one.
+- In case you can not copy-paste the grades, I also made the `insert_grades.py` script. To use it, run it inside its containing folder, head over to `labmat > course > Ayudante > Ingreso de Notas` and click the pencil icon of the test you want to grade. There, select the first box on where to enter the grades and press the `b` key on your keyboard. It should automatically fill in all the grades one by one.
 
 
 You need to prepare three files that should be placed in the same folder as the `.py` file:
