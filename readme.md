@@ -24,6 +24,6 @@ For `raw_student_grades.csv`, go to `Canvas > [Test you want to grade] > Estadí
 The `last_name_exceptions.txt` has to be generated manually. It's used to handle students with last names longer than two words (for example, I had three studens with last names `first_name second_name  (maybe_third_name) last_name_1 San Martín`). You need to store, line by line the equivalent of the `San` from `San Martín` for each exception. Note that this only works for second last names with two words.
 
 # Limitations
-- This program can not handle students whose last names have a two-word name as a first last name, i.e., if you have an student named `name name Del saz last_name_2` so that the first last name is `Del saz`, the program will most likely throw a score of `0`.
+- This program can not handle students whose last names have two or more words as a first last name, i.e., if you have an student named `name name Del saz last_name_2` so that the first last name is `Del saz`, the program will most likely throw a score of `0`.
 
 - The same would happen with last names of more than three words (compound last names are fine as long as they are hyphenated).
