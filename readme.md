@@ -21,7 +21,7 @@ For `all_students.csv`, go to `labmat > course > Ayudante > Alumnos`, and get th
 
 For `raw_studenr_grades.csv`, go to `Canvas > [Test you want to grade] > Estadísticas del examen` and click on `Análisis de estudiantes` to genereate a report. Download it as a `.csv` and rename it to `raw_student_grades`
 
-The `last_name_exceptions.txt` has to be generated manually. Its used to handle students with last names longer than two words (for example, I had three studens with last names `first_name_1 second_name 1 (maybe_third_name) last_name_1 San Martín`). You need to store, line by line the equivalent of the `San` from `San Martín`.
+The `last_name_exceptions.txt` has to be generated manually. It's used to handle students with last names longer than two words (for example, I had three studens with last names `first_name_1 second_name 1 (maybe_third_name) last_name_1 San Martín`). You need to store, line by line the equivalent of the `San` from `San Martín`.
 
 # Limitations
 - This program can not handle students whose last names have a two-word name as a first last name, i.e., if you have an student named `name name Del saz last_name_2` so that the first last name is `Del saz`, the program will most likely throw a score of `0`.
