@@ -1,6 +1,6 @@
 # Requirements
 - `python 3.x`
-### To obtain the csv
+### To create the csv file
 - `pandas`
 - `numpy`
 ### To insert the grades
