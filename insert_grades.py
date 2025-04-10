@@ -4,22 +4,21 @@ from pynput.keyboard import *
 
 stop = False
 pause = True
-
-def enter_grade(grade):
-    pyautogui.write(grade, 0.005)
-    pyautogui.press('down')
     
 
 def on_press(key):
     # print(key)
-    global stop, pause
-    if key.char == 'q':
-        stop = True
-    elif key.char == 'b':
-        print('b pressed')
-        pause = False
-    elif key.char == 's':
-        pause = True 
+    try:
+        global stop, pause
+        if key.char == 'q':
+            stop = True
+        elif key.char == 'b':
+            print('b pressed')
+            pause = False
+        elif key.char == 's':
+            pause = True 
+    except:
+        pass
 
 
 with open("students_grades.csv", "r", encoding="utf-8") as f:
