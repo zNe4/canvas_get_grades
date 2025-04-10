@@ -35,7 +35,7 @@ d = defaultdict(int)
 for i in range(len(names_array)):
     d[names_array[i]] = round(scores_array[i], 2)
 
-# And d is the dict containig the scores of the unique sorted name
+# And d is the dict containing the scores of the unique sorted name
 
 df2['score'] = df2.apply(lambda x: d[' '.join(sorted(clean_string(x['name']).split(' ')))], axis=1)
 

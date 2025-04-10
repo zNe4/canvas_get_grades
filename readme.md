@@ -22,4 +22,4 @@ For `raw_student_grades.csv`, go to `Canvas > [Test you want to grade] > Estadí
 
 
 # Limitations
-- This program will only produce a file when the `raw_student_grades.csv` file has a column named `name` and other named `score`.
+- This program will only produce a file when the `raw_student_grades.csv` file contains a column named `name` and other named `score`.
