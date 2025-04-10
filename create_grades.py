@@ -15,7 +15,7 @@ with open("last_name_exceptions.txt", "r", encoding='utf-8') as f:
 # Get the important stuff from the dataframe
 df = pd.read_csv("raw_student_grades.csv", sep=",", header=0)
 # print(df.head())
-df.drop(df.columns[[i for i in range(1,98)]], axis=1, inplace=True)
+df = df[['name', 'score']]
 df = df.sort_values(['name', 'score'], ascending=False).groupby('name').head(1)
 df['name'] = df.apply(lambda x: ''.join(x['name'].split('-')), axis=1)
 
