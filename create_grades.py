@@ -21,8 +21,8 @@ df['name'] = df.apply(lambda x: ''.join(x['name'].split('-')), axis=1)
 
 
 df2 = pd.read_csv("all_students.csv", sep=",", header=0)
-df2.rename(columns={'Nombre Estudiante': 'name', "Pregunta\nPTC1": 'score'}, inplace=True)
-df2 = df2[['name','score']]
+df2.rename(columns={'Nombre Estudiante': 'name'}, inplace=True)
+df2 = df2[['name']]
 
 df2['name'] = df2.apply(lambda x: ''.join(x['name'].split('-')), axis=1)
 names_array = [
