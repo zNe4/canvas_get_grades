@@ -31,7 +31,8 @@ If it does, you're good to go. If it doesnt, check which of the elements of
 with the one that shows the correct grade, and replace the `3` in the other command by the correct number.
 3. Paste the following command:
 ```js
-for (let i=0; i<85; i++){
+
+for (let i=0; i<NUMBER_OF_STUDENTS; i++){
 	try {
 		name = document.querySelector('[data-testid="rubric-total"]').classList[0];
 		document.getElementById('grading-box-extended').value = document.getElementsByClassName(name)[3].innerHTML.split(' ')[2];
