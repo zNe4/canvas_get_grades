@@ -33,7 +33,8 @@ with the one that shows the correct grade, and replace the `3` in the other comm
 ```js
 for (let i=0; i<85; i++){
 	try {
-		document.getElementById('grading-box-extended').value = document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')[3].innerHTML.split(' ')[2];
+		name = document.querySelector('[data-testid="rubric-total"]').classList[0];
+		document.getElementById('grading-box-extended').value = document.getElementsByClassName(name)[3].innerHTML.split(' ')[2];
 		document.getElementById('grading-box-extended').dispatchEvent(new Event('change'));
         document.getElementById('next-student-button').dispatchEvent(new Event('click'));
 	}
