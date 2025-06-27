@@ -24,12 +24,21 @@ The program will show all possible tests, and you can choose which one to get th
 
 ## EXTRA: How to insert grades quickly in speedgrader
 1. Open the browser console by pressing `f12`
-2. Check if the following function shows the same grade the total score:
-`document.getElementsByClassName('css-oowy02-view-flexItem')[3].innerHTML.split(' ')[2]`
+2. Check if the following function shows the same grade as the total score:
+`document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')[3].innerHTML.split(' ')[2]`
 If it does, you're good to go. If it doesnt, check which of the elements of 
-`document.getElementsByClassName('css-oowy02-view-flexItem')`
-shows the correct grade and replace the `3` in the other command by the correct number.
+`document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')`
+with the one that shows the correct grade, and replace the `3` in the other command by the correct number.
 3. Paste the following command:
-`document.getElementById('grading-box-extended').value = document.getElementsByClassName('css-oowy02-view-flexItem')[3].innerHTML.split(' ')[2];document.getElementById('grading-box-extended').dispatchEvent(new Event('change'))`
-And check that the grade was succesfully inserted.
-4. That's it. Do it for every student (shouldn't take longer than 2 minutes if you remember that pressing the up arrow in the console types in the command you typed before), or make a function that awaits for the event to be handled to then press the button with id `next-student-button` inside a while loop for full automatization.
+```js
+for (let i=0; i<85; i++){
+	try {
+		document.getElementById('grading-box-extended').value = document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')[3].innerHTML.split(' ')[2];
+		document.getElementById('grading-box-extended').dispatchEvent(new Event('change'));
+        document.getElementById('next-student-button').dispatchEvent(new Event('click'));
+	}
+	catch (error) {
+		document.getElementById('next-student-button').dispatchEvent(new Event('click'));
+	}
+}
+```

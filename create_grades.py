@@ -44,10 +44,9 @@ names_array = [
 ]
 # Now each element in the array is the sorted name (unique) of a student.
 scores_array= df['score'].tolist()
-
 d = defaultdict(int)
 for i in range(len(names_array)):
-    d[names_array[i]] = round(scores_array[i], 2)
+    d[names_array[i]] = round(float(scores_array[i]), 2)
 
 # And d is the dict containing the scores of the unique sorted name
 
