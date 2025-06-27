@@ -24,12 +24,7 @@ The program will show all possible tests, and you can choose which one to get th
 
 ## EXTRA: How to insert grades quickly in speedgrader
 1. Open the browser console by pressing `f12`
-2. Check if the following function shows the same grade as the total score:
-`document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')[3].innerHTML.split(' ')[2]`
-If it does, you're good to go. If it doesnt, check which of the elements of 
-`document.getElementsByClassName('this_is_the_name_of_the_box_that_has_the_grades')`
-with the one that shows the correct grade, and replace the `3` in the other command by the correct number.
-3. Paste the following command:
+2. Paste the following command:
 ```js
 
 for (let i=0; i<NUMBER_OF_STUDENTS; i++){
@@ -44,3 +39,4 @@ for (let i=0; i<NUMBER_OF_STUDENTS; i++){
 	}
 }
 ```
+3. Profit.
