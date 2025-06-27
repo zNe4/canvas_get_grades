@@ -24,7 +24,7 @@ The program will show all possible tests, and you can choose which one to get th
 
 ## EXTRA: How to insert grades quickly in speedgrader
 1. Open the browser console by pressing `f12`
-2. Paste the following command:
+2. Paste the following code and then enter:
 ```js
 
 for (let i=0; i<NUMBER_OF_STUDENTS; i++){
