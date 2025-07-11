@@ -9,7 +9,7 @@
 
 # How to use
 - After installing the requirements and preparing some files (scroll down), run the `create_grades.py` script inside its containing folder.
-- In case you cannot copy-paste the grades, I also made the `insert_grades.py` script. To use it, make sure you ran have the `students_grades.csv` file created by `create_grades.py` in the same folder. Run `insert_grades.py` inside its containing folder, head over to `labmat > course > Ayudante > Ingreso de Notas` and click the pencil icon of the test you want to insert the grades on. There, select the first box on where to enter the grades and press the `b` key on your keyboard. It should automatically fill in all the grades one by one. For some reason this only works in linux and not in windows, if you know how to fix that please make a pull request, issue or notify me in any way.
+- In case you cannot copy-paste the grades, I also made the `insert_grades.py` script. To use it, make sure you ran have the `students_grades.csv` file created by `create_grades.py` in the same folder. Run `insert_grades.py` inside its containing folder, head over to `labmat > course > Ayudante > Ingreso de Notas` and click the pencil icon of the test you want to insert the grades on. There, select the first box on where to enter the grades and press the `b` key on your keyboard. It should automatically fill in all the grades one by one. For some reason this only works on linux and not on windows, if you know how to fix that please make a pull request, issue or notify me in any way.
 
 
 You need to prepare two files that should be placed in the same folder as the `.py` file:
@@ -24,9 +24,8 @@ The program will show all possible tests, and you can choose which one to get th
 
 ## EXTRA: How to insert grades quickly in speedgrader
 1. Open the browser console by pressing `f12`
-2. Paste the following code, replace `NUMBER_OF_STUDENTS` for your number of stundents and then hit the enter key:
+2. Paste the following code, replace `NUMBER_OF_STUDENTS` with your number of students and then hit the enter key:
 ```js
-
 for (let i=0; i<NUMBER_OF_STUDENTS; i++){
 	try {
 		name = document.querySelector('[data-testid="rubric-total"]').classList[0];
