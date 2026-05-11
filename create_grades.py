@@ -26,6 +26,7 @@ df2['login'] = df2['login'].apply(lambda x: x.split('@')[0]) # Get only the name
 
 df2 = pd.merge(df2, df, on='login', how='inner')
 df2.drop(columns=['login'], inplace=True)
+df2['score'] = df2['score'].fillna(0)
 df2.to_csv('students_grades.csv', index=False)
 print('Done!')
 
