@@ -24,7 +24,7 @@ df2.rename(columns={'Email': 'login', 'Nombre Estudiante': 'name'}, inplace=True
 df2 = df2[['name', 'login']] # So df2 is the name and login given by labmat of the student
 df2['login'] = df2['login'].apply(lambda x: x.split('@')[0]) # Get only the name and not the domain
 
-df2 = pd.merge(df2, df, on='login', how='inner')
+df2 = pd.merge(df2, df, on='login', how='left')
 df2.drop(columns=['login'], inplace=True)
 df2['score'] = df2['score'].fillna(0)
 df2.to_csv('students_grades.csv', index=False)
